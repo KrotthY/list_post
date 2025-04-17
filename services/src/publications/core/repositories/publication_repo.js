@@ -57,7 +57,8 @@ export const UpdatePublicationDb = async (IdPublication, FormData) =>{
 export const DeletePublicationDb = async (IdPublication) => {
   const responseDb = await prisma.publication.update({
     where:{
-      id_publication: IdPublication
+      id_publication: IdPublication,
+      deleted_status:0,
     },
     data: {
       deleted_status:1,
