@@ -32,26 +32,17 @@ Proyecto fullstack para gestión de publicaciones con CRUD completo.
 
 ## Estructura del proyecto
 
-root/
-│
-
+list_post(root)/
 ├── database/             # Archivos sql
-
 ├── services/             # Backend Node.js + Prisma
-
 │   ├── src/
-
 │   └── package.json
-
 ├── web/
-
 │   └── list_post/        # Frontend React + Vite
-
 │       ├── src/
-
 │       └── package.json
-
 └── README.md
+
 
 
 ## 📦 Instalación
@@ -59,7 +50,7 @@ root/
 ```bash
 ### 🔹 1. Clonar el proyecto
 git clone https://github.com/KrotthY/list_post.git
-cd 
+cd list_post
 
 ###  🔹 2.- Instalación del frontend
 
@@ -72,6 +63,15 @@ pnpm run dev
 
 cd services
 pnpm install
+pnpm approve-builds # autorize el uso de @prisma/client u otro paquete que necesite aprobacion, todos son obligatorios
+npx prisma init --datasource-provider postgresql
+
+Agregue las variables de entorno, ingrese su usuario de bd, tal como indica el scripts db
+DATABASE_URL="su url de base"
+PORT = 3000
+
+npx prisma db pull
+npx prisma generate
 pnpm run dev
 
 - El local se ejecutara en el puerto 3000
