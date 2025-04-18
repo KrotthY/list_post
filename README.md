@@ -34,18 +34,23 @@ Proyecto fullstack para gestión de publicaciones con CRUD completo.
 
 root/
 │
-
-├── database/             # Archivos sql
-
 │
-
+├── database/             # Archivos sql
+│
+│
+│
 ├── services/             # Backend Node.js + Prisma
-
+│
 │   ├── src/
+│
 │   └── package.json
+│
 ├── web/
+│   │
 │   └── list_post/        # Frontend React + Vite
+│       │
 │       ├── src/
+│       │
 │       └── package.json
 └── README.md
 
