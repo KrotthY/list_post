@@ -11,7 +11,7 @@ export const Home = () => {
   if(isLoading) return <p>Loading Publications</p>
   if(error) return <p>Error: {error.message}</p>
   const filteredPublications = publications.filter((item)=>{
-    return item.post_name.toLowerCase().includes(search.toLowerCase())
+    return item.PostName.toLowerCase().includes(search.toLowerCase())
   })
   return (
     <>
@@ -62,7 +62,7 @@ export const Home = () => {
             <tbody className="divide-y divide-gray-200 border-b-4 border-gray-300 ">
             {
               filteredPublications.map((post)=>(
-                <ListPost key={post?.post_id} id={post.post_id} name={post.post_name} description={post.post_description}/>
+                <ListPost key={post?.PostId} id={post.PostId} name={post.PostName} description={post.PostDescription}/>
               ))
             }
             </tbody>

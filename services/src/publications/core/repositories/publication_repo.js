@@ -21,8 +21,8 @@ export const GetAllPublicationDB = async () =>{
 export const CreatePublicationDb = async (FormData) => {
   const responseDB = await prisma.publication.create({
     data:{
-      name:FormData.post_name,
-      description:FormData.post_description
+      name:FormData.PostName,
+      description:FormData.PostDescription
     },
     select: {
       id_publication: true,
@@ -41,8 +41,8 @@ export const UpdatePublicationDb = async (IdPublication, FormData) =>{
       id_publication: IdPublication
     },
     data: {
-      name:FormData.post_name,
-      description:FormData.post_description
+      name:FormData.PostName,
+      description:FormData.PostDescription
     },
     select: {
       id_publication: true,

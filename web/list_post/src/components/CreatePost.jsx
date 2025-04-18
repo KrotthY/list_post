@@ -26,8 +26,8 @@ export const CreatePost = () => {
   
     const onSubmit = async (FormData) =>{
       const dataFormat = {
-        post_name:FormData.title,
-        post_description:FormData.description
+        PostName:FormData.title,
+        PostDescription:FormData.description
       }
       try {
         await createPublication(dataFormat).unwrap();
