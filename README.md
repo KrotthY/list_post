@@ -36,8 +36,11 @@ root/
 │
 
 ├── database/             # Archivos sql
+
 │
+
 ├── services/             # Backend Node.js + Prisma
+
 │   ├── src/
 │   └── package.json
 ├── web/
